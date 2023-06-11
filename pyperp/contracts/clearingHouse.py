@@ -56,6 +56,88 @@ class ClearingHouse:
         )
         self.logger.info("vETH contract loaded")
 
+        self.logger.info("Loading vSOL contract")
+        vsol_meta = self._provider.load_meta("vSOL")
+        self.vsol = self._provider.api.eth.contract(
+            address=vsol_meta["address"],
+            abi=vsol_meta["abi"]
+        )
+        self.logger.info("vSOL contract loaded")
+
+        self.logger.info("Loading vFTM contract")
+        vftm_meta = self._provider.load_meta("vFTM")
+        self.vftm = self._provider.api.eth.contract(
+            address=vftm_meta["address"],
+            abi=vftm_meta["abi"]
+        )
+        self.logger.info("vFTM contract loaded")
+
+        vaave_meta = self._provider.load_meta("vAAVE")
+        self.vaave = self._provider.api.eth.contract(
+            address=vaave_meta["address"],
+            abi=vaave_meta["abi"]
+        )
+
+        vdoge_meta = self._provider.load_meta("vDOGE")
+        self.vdoge = self._provider.api.eth.contract(
+            address=vdoge_meta["address"],
+            abi=vdoge_meta["abi"]
+        )
+
+
+        vflow_meta = self._provider.load_meta("vFLOW")
+        self.vflow = self._provider.api.eth.contract(
+            address=vflow_meta["address"],
+            abi=vflow_meta["abi"]
+        )
+
+        vatom_meta = self._provider.load_meta("vATOM")
+        self.vatom = self._provider.api.eth.contract(
+            address=vatom_meta["address"],
+            abi=vatom_meta["abi"]
+        )
+
+        vavax_meta = self._provider.load_meta("vAVAX")
+        self.vavax = self._provider.api.eth.contract(
+            address=vavax_meta["address"],
+            abi=vavax_meta["abi"]
+        )
+
+        vatom_meta = self._provider.load_meta("vATOM")
+        self.vatom = self._provider.api.eth.contract(
+            address=vatom_meta["address"],
+            abi=vatom_meta["abi"]
+        )
+
+        vcrv_meta = self._provider.load_meta("vCRV")
+        self.vcrv = self._provider.api.eth.contract(
+            address=vcrv_meta["address"],
+            abi=vcrv_meta["abi"]
+        )
+
+        vperp_meta = self._provider.load_meta("vPERP")
+        self.vperp = self._provider.api.eth.contract(
+            address=vperp_meta["address"],
+            abi=vperp_meta["abi"]
+        )
+
+        vmatic_meta = self._provider.load_meta("vMATIC")
+        self.vmatic = self._provider.api.eth.contract(
+            address=vmatic_meta["address"],
+            abi=vmatic_meta["abi"]
+        )
+
+        vop_meta = self._provider.load_meta("vOP")
+        self.vop = self._provider.api.eth.contract(
+            address=vop_meta["address"],
+            abi=vop_meta["abi"]
+        )
+        vape_meta = self._provider.load_meta("vAPE")
+        self.vape = self._provider.api.eth.contract(
+            address=vape_meta["address"],
+            abi=vape_meta["abi"]
+        )
+
     def add_liquidity(
         self,
         params: AddLiquidityParams,

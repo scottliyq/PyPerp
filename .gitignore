@@ -74,3 +74,9 @@ dist/pyperp-2.0.0-py3.10.egg
 pyperp.egg-info/PKG-INFO
 test.py
 test.ipynb
+.env
+arb.py
+perp_bn_hedge.py
+perp_bn_hedge_eth7.py
+test.ts
+test2.py
