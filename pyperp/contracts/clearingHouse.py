@@ -276,7 +276,7 @@ class ClearingHouse:
 
         tx = self.clearing_house.functions.openPosition(
             astuple(params)
-        ).buildTransaction(tx_params)
+        ).build_transaction(tx_params)
 
         signed_tx = self._provider.api.eth.account.sign_transaction(
             tx, self.account.key.hex()
