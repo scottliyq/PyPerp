@@ -14,9 +14,9 @@ from pyperp.common.types import GasParams
 TRADE_SYMBOL = 'PERP'
 TRADE_PAIR = TRADE_SYMBOL+'USDT'
 MAX_INDEX = 1
-TRADE_BN_FLG = False
+TRADE_BN_FLG = True
 # TARGET_POS_SIZE = 500
-ICE_AMOUNT = 400
+ICE_AMOUNT = 300
 
 BN_DIRECTION = 'buy'
 PERP_DIRECTION = 'sell'
@@ -122,7 +122,7 @@ def open_position(symbol, direction, amount):
     params, gas_params
   )
 
-  print(receipt)
+  # print(receipt)
 
 def main():
     index = 0
